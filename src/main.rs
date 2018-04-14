@@ -10,7 +10,7 @@ fn main() {
     if args.len() >= 2 {
         let main_arg = &args[1];
 
-        match main_arg.parse::<i32>() {
+        match main_arg.parse::<u32>() {
             Ok(n) => {
                 println!("I'm calculating the factorial of {}", n);
                 let result = bigint_factorial(n);
