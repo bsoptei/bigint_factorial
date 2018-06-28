@@ -14,7 +14,7 @@ fn main() {
             Ok(n) => {
                 println!("I'm calculating the factorial of {}", n);
 
-                let result = bigint_factorial(n);
+                let result = bigint_factorial(n).to_str_radix(10);
                 let shown_length = if &result.len() < &32 { result.len() } else { 32 };
 
                 println!(

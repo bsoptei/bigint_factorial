@@ -7,7 +7,7 @@ mod tests {
 
     #[test]
     fn factorial_2000() {
-        let result = bigint_factorial(2000);
+        let result = bigint_factorial(2000).to_str_radix(10);
         let first_32_digits = &result[..32];
 
         assert_eq!(
