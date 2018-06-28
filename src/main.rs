@@ -19,7 +19,8 @@ fn main() {
 
                 println!(
                     "Done. Result:\n{}.{}E{}",
-                    &result[..1], &result[1..shown_length],
+                    &result[..1],
+                    &result[1..shown_length],
                     result.len() - 1
                 )
             },
