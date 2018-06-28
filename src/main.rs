@@ -12,15 +12,21 @@ fn main() {
 
         match main_arg.parse::<u32>() {
             Ok(n) => {
-                println!("I'm calculating the factorial of {}.", n);
+                println!("I'm calculating the factorial of {}", n);
+
                 let result = bigint_factorial(n);
                 let shown_length = if &result.len() < &32 { result.len() } else { 32 };
-                println!("Done. Result:\n{}.{}E{}",  &result[..1], &result[1..shown_length], result.len() - 1)
+
+                println!(
+                    "Done. Result:\n{}.{}E{}",
+                    &result[..1], &result[1..shown_length],
+                    result.len() - 1
+                )
             },
-            Err(_e) => println!("{} is not an integer >= 0.", main_arg)
+            Err(_e) => println!("Could not parse {}", main_arg)
         }
     } else {
-        println!("No argument, no result.")
+        println!("No argument, no result")
     }
 
 }
