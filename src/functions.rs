@@ -1,6 +1,5 @@
 pub mod factorial {
-    extern crate num_bigint;
-    use self::num_bigint::{ToBigInt, BigInt};
+    use num_bigint::{ToBigInt, BigInt};
 
     pub fn bigint_factorial(i: u32) -> BigInt {
         (1..=i).into_iter()

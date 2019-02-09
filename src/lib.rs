@@ -3,7 +3,7 @@ mod functions;
 #[cfg(test)]
 mod tests {
 
-    use functions::factorial::*;
+    use crate::functions::factorial::*;
 
     #[test]
     fn factorial_2000() {
